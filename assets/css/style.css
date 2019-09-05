@@ -12,9 +12,12 @@ h1{
 h2, h3{
     font-family: "Bevan", cursive;
     color: yellow;
-   
 }
-
+.container {
+    border-style: dotted;
+    border-width: 5px;
+    
+}
 
 #headerPic{
     height: 200px;
