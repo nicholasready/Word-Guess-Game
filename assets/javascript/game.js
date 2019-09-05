@@ -21,51 +21,25 @@ var word
 function game() {
     var word = words[Math.floor(Math.random() * words.length)];
     var answerArray = [];
+    //The below loop adds a "_" for however many letters the word has (i)
     for (var i = 0; i < word.length; i++) {
         answerArray[i] = "_";
     }
     var remainingLetters = word.length;
 
 
-    {
+    {     // When the player presses a key, it will run the following function
         document.onkeyup = function (event) {
 
-
+            //If key that is pressed is between a and z, then assign that event key to the guess
             if ((event.key >= "a") && (event.key <= "z")) {
                 var guess = event.key;
             }
+            //if not, leave it blank.
             else { event.key = "" };
 
-            if
-            ((lettersGuessed.length <= 13) &&
-                (guess !== lettersGuessed[" "])) {
-                lettersGuessed.push(guess)
-            }
-            else {
-                lettersGuessed2.push(guess)
-            };
 
 
-            for (var j = 0; j < word.length; j++) {
-                if
-                (word[j] === guess) {
-                    answerArray[j] = guess;
-                    remainingLetters--;
-                    Letters = true;
-
-
-
-
-                }
-                else if ((guess != answerArray[0]) && (guess != answerArray[1]) && (guess != answerArray[2]) && (guess != answerArray[3])
-                        && (guess != answerArray[4]) && (guess != answerArray[5]) && (guess != answerArray[6]) && (guess != answerArray[7]) && (guess != answerArray[8]))
-                        {
-                            Letters= false;
-                        }
-                
-            
-          
-            }
             if ((remainingLetters === 0) && (word === nickelodeon)) {
                 alert("Sweet, dude! You got it! It's Nickelodeon.")
                 game();
