@@ -1,0 +1,22 @@
+body{
+    background-color: black;
+    text-align: center;
+    font-size: 22px;
+    color: yellow;
+    font-family: "Bevan", cursive;
+}
+h1{
+    font-family: "Bevan", cursive;
+    color: hotpink
+}
+h2, h3{
+    font-family: "Bevan", cursive;
+    color: yellow;
+   
+}
+
+
+#headerPic{
+    height: 200px;
+    width: 400px;
+}
