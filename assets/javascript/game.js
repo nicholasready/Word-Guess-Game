@@ -25,7 +25,7 @@ function game() {
     for (var i = 0; i < word.length; i++) {
         answerArray[i] = "_";
     }
-    var remainingLetters = word.length;
+    
 
 
     {     // When the player presses a key, it will run the following function
@@ -39,7 +39,7 @@ function game() {
             else { event.key = "" };
 
 
-
+            //if statements for when the remaining letter is zero and the word is guessed, start a new game, add 1 to the score, etc. 
             if ((remainingLetters === 0) && (word === nickelodeon)) {
                 alert("Sweet, dude! You got it! It's Nickelodeon.")
                 game();
@@ -110,18 +110,17 @@ function game() {
                 lettersGuessed2 = [];
                 
             };
-            if (Letters === false) {
-                guessesLeft --;
-            };
+            
 
 
 //Return the first element that matches the respective ID
  document.querySelector("#wins").innerHTML = wins;
- document.querySelector("#theWord").innerHTML = answerArray.join("");
+ document.querySelector("#theWord").innerHTML = answerArray;
  document.querySelector("#guesses").innerHTML = guessesLeft
 document.querySelector("#lettersGuessed").innerHTML = lettersGuessed
 document.querySelector("#lettersGuessed2").innerHTML = lettersGuessed2
         }
     }
 }
+//executes the game
 game();
